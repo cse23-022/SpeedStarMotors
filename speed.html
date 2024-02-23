@@ -9,17 +9,9 @@
         margin: 0;
         padding: 0;
         font-family: Arial, sans-serif;
-    }
-    /* Background Video */
-    #bg-video {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -1;
+        /* Set the background video */
+        background: #000 url('bmw.mp4') no-repeat center center fixed;
+        background-size: cover;
     }
     /* Header */
     header {
@@ -30,9 +22,7 @@
     }
     /* Navigation */
     nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        text-align: center;
         background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
         padding: 10px;
     }
@@ -42,39 +32,20 @@
         margin: 0 10px;
         position: relative;
     }
-    .dropdown {
-        position: relative;
-    }
     .dropdown-content {
         display: none;
         position: absolute;
         background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-        min-width: 200px;
+        min-width: 160px;
         z-index: 1;
-        top: 100%;
         left: 0;
-        padding: 10px;
-        border-radius: 5px;
     }
     .dropdown:hover .dropdown-content {
         display: block;
     }
     .dropdown-content img {
-        width: 100%;
-        max-width: 150px; /* Limiting maximum width for images */
-        height: auto;
-        margin: 5px 0;
-        border-radius: 5px;
-    }
-    .dropdown-content a {
-        display: block;
-        color: #fff;
-        text-decoration: none;
-        padding: 5px 0;
-    }
-    .dropdown-content a:hover {
-        background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background on hover */
-        border-radius: 3px;
+        width: 100px; /* Adjust size as needed */
+        margin: 5px;
     }
     .dropdown-arrow {
         display: inline-block;
@@ -83,8 +54,9 @@
         border: 5px solid transparent;
         border-top-color: #fff;
         position: absolute;
-        top: calc(50% - 10px);
-        right: 5px;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
     }
     /* Main Content */
     main {
@@ -106,13 +78,6 @@
 </head>
 <body>
 
-<!-- Background Video -->
-<video id="bg-video" autoplay loop muted>
-    <source src="bmw.mp4" type="video/mp4">
-    <!-- Add additional source elements for other video formats -->
-    Your browser does not support the video tag.
-</video>
-
 <!-- Header -->
 <header>
     <h1>SpeedStar Motors Welcomes you</h1>
@@ -121,17 +86,17 @@
 
 <!-- Navigation -->
 <nav>
-    <a href="index.html">Home</a>
+    <a href="#">Home</a>
     <div class="dropdown">
         <a href="#">Cars<span class="dropdown-arrow"></span></a>
         <div class="dropdown-content">
-            <img src="lambo.jpeg" alt="Lamborghini">
-            <img src="kong.jpg" alt="King Kong">
-            <img src="ford.jpeg" alt="Ford">
+            <img src="lambo.jpeg" alt="Ford">
+            <img src="kong.jpg" alt="Lamborghini">
+            <img src="ford.jpeg" alt="King Kong">
             <img src="benz.jpeg" alt="Mercedes-Benz">
             <img src="Mclaren.jpeg" alt="Mclaren">
-            <img src="bmww.jpeg" alt="BMW">
-            <img src="konesigg.jpg" alt="Koenigsegg">
+            <img src="bmww.jpeg" alt="bmww">
+            <img src="konesigg.jpg" alt="konesigg">
             <img src="GMC.avif" alt="GMC">
         </div>
     </div>
@@ -139,8 +104,8 @@
     <div class="dropdown">
         <a href="#">Contact<span class="dropdown-arrow"></span></a>
         <div class="dropdown-content">
-            <a href="mailto:speedstarmotors09@gmail.com">Email</a>
-            <a href="tel:723278989">Phone</a>
+            <a href="mailto:speedstarmotors09@gmail.com">Email: speedstarmotors09@gmail.com</a>
+            <a href="tel:723278989">Phone: 723278989</a>
         </div>
     </div>
 </nav>
